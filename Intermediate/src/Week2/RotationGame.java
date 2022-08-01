@@ -2,6 +2,10 @@ package Week2;
 
 import java.util.Scanner;
 
+/*
+This code is for right rotation
+ */
+
 public class RotationGame {
 
 
