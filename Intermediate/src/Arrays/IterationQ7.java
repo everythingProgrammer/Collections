@@ -1,4 +1,4 @@
-package Week2;
+package Arrays;
 
 public class IterationQ7 {
     public static void main(String[] args) {

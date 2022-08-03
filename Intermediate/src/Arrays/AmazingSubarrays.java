@@ -1,4 +1,4 @@
-package Week2;
+package Arrays;
 
 public class AmazingSubarrays {
     public static  int solve(String A) {

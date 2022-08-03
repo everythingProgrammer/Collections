@@ -1,4 +1,4 @@
-package Week2;
+package Arrays;
 
 public class ArrayProduct {
     public int[] solve(int[] A) {

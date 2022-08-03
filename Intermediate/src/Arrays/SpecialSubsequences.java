@@ -1,4 +1,4 @@
-package Week2;
+package Arrays;
 
 public class SpecialSubsequences {
     public int solve(String A) {
