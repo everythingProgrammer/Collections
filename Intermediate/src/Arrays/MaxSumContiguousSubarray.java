@@ -23,7 +23,7 @@ public class MaxSumContiguousSubarray {
     }
 
     // Using Kdane's algorithm
-    public int maxSubArray(final List<Integer> A){
+    public int maxSubArray2(final List<Integer> A){
 
         int maxSum = Integer.MIN_VALUE;
         int n = A.size();
@@ -44,7 +44,7 @@ public class MaxSumContiguousSubarray {
         int nums [] = {1,2,3};
         int sum = 0;
         for(int i = 0 ; i<nums.length; i++){
-            
+
         }
     }
 
