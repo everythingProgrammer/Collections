@@ -34,4 +34,21 @@ public class SameRemainder {
     public static void main(String[] args) {
         System.out.println(solve(11,23));
     }
+
+
+    /*
+        a=23, b= 11, (a-b)= 12, i=1,(a-b)%i = 0
+        a=23, b= 11, (a-b)= 12, i=2,(a-b)%i = 0
+        a=23, b= 11, (a-b)= 12, i=3,(a-b)%i = 0
+        a=23, b= 11, (a-b)= 12, i=4,(a-b)%i = 0
+        a=23, b= 11, (a-b)= 12, i=5,(a-b)%i = 2
+        a=23, b= 11, (a-b)= 12, i=6,(a-b)%i = 0
+        a=23, b= 11, (a-b)= 12, i=7,(a-b)%i = 5
+        a=23, b= 11, (a-b)= 12, i=8,(a-b)%i = 4
+        a=23, b= 11, (a-b)= 12, i=9,(a-b)%i = 3
+        a=23, b= 11, (a-b)= 12, i=10,(a-b)%i = 2
+        a=23, b= 11, (a-b)= 12, i=11,(a-b)%i = 1
+        a=23, b= 11, (a-b)= 12, i=12,(a-b)%i = 0
+        12
+     */
 }
