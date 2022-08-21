@@ -13,7 +13,7 @@ public class SameRemainder {
         int b = Math.min(A,B);
         int commonFactor = 1;
 //        long sysTime3 = System.currentTimeMillis();
-        for(int i = 1 ; i<=(a); i++){
+        for(int i = 1 ; i<=(a-b); i++){
 
 //            System.out.println("a="+a+", b= "+b+", (a-b)= "+(a-b) +", i="+(i)+ ",a%i = "+ ((a)%i)+ ",b%i = "+ ((b)%i) );
 
