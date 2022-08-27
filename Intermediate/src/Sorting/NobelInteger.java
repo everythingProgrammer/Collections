@@ -1,4 +1,4 @@
-package ModularArithematic;
+package Sorting;
 
 import java.util.ArrayList;
 import java.util.Collections;
