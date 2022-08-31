@@ -36,12 +36,12 @@ public class BoyerMoorN2 {
                 else if (A.get(i) == b)
                     countb++;
             }
-
+            ArrayList<Integer> ans = new ArrayList<>();
             if(counta> A.size()/3){
-                return a;
+                ans.add(a);
             }
             if(countb>A.size()/3){
-                return  b;
+                ans.add(b);
             }
             return -1;
         /*
