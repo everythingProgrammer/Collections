@@ -15,6 +15,7 @@ public class SubarrayWithGivenSum {
         int left = 0 ;
         int right = 0;
         boolean nextLoop  = true;
+        hmap.containsKey()
         for(int i = 0 ; i<A.size() && nextLoop ; i++){
 
             psum  = psum+A.get(i);
@@ -60,6 +61,6 @@ public class SubarrayWithGivenSum {
             ans.add(sr.nextInt());
         }
         System.out.println(solve(ans,B ));
-        
+
     }
 }
