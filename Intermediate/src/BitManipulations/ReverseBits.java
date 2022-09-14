@@ -46,7 +46,7 @@ public class ReverseBits {
 
 
     /*
-        Expected Solution
+        Expected DesignLinkedList.java
      */
     public static long rev(long A){
         long rev = 0;
