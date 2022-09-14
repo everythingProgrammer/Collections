@@ -7,7 +7,7 @@ public class ElementsRemoval {
 
 
     /*
-        Optimal Solution
+        Optimal DesignLinkedList.java
      */
     public int optimal(ArrayList<Integer> A) {
 
