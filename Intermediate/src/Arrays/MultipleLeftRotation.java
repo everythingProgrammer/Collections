@@ -22,7 +22,7 @@ public class MultipleLeftRotation {
             i++;
             j--;
         }
-         // reverse front till 0 indx
+         // reverse front till 0 - indx
         i = 0;
         j = indx;
         while(i<j){
