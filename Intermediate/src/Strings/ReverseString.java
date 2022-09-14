@@ -34,7 +34,7 @@ public class ReverseString {
 
 
     /*
-            Optimal Solution - same tc and sc
+            Optimal DesignLinkedList.java - same tc and sc
      */
     public String optimal(String s) {
         StringBuilder res = new StringBuilder();
