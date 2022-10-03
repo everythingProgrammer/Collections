@@ -56,7 +56,10 @@ public class CompDemo {
         Comparator<Integer> normalComparator = new Comparator<Integer>() {
             @Override
             public int compare(Integer o1, Integer o2) {
-                return o1 - o2;
+//                System.out.println("o1="+o1+", o2= "+o2+" => "+( o1-o2) ) ;
+//                return o1 - o2;
+                System.out.println("o1="+o1+", o2= "+o2+" => "+( o2-o1) ) ;
+                return o2 - o1;
             }
         };
 
@@ -70,7 +73,7 @@ public class CompDemo {
             }
         };
 
-        Collections.sort(obj, sortComparator);
+        Collections.sort(obj, normalComparator);
 
         System.out.println(obj);
     }
