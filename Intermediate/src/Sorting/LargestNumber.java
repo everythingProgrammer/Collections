@@ -63,11 +63,17 @@ public class LargestNumber {
 
         Comparator<String> sortComparator = new Comparator<String>(){
             @Override
-            public int compare(String o1, String o2){
-                o1 = o1+o2;
-                o2 = o2+o1;
+            public int compare(String o1a, String o2a){
+                String o1 = o1a;
+                String o2 = o2a;
+                System.out.println("o1= "+o1+" o2= "+o2);
+                o1 = o1a+o2a;
+                o2 = o2a+o1a;
+                System.out.println("o2 -> "+o2+", o1-> "+o1+" = "+o2.compareTo(o1));
                 return o2.compareTo(o1) ;
+//                return o1.compareTo(o2);
             }
+
         };
 
         Collections.sort(list2,sortComparator);
