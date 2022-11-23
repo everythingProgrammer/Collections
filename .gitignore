@@ -26,3 +26,4 @@ replay_pid*
 *.xml
 .idea/modules.xml
 *.xml
+.idea/misc.xml
