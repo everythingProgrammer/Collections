@@ -12,9 +12,9 @@ public class InorderIteratively {
         Stack<TreeNode> s = new Stack<>();
         curr = A;
         ArrayList<Integer> Order = new ArrayList<>();
-        while(!s.isEmpty() || curr != null){
+        while(!s.isEmpty() || (curr != null && curr.val!=-1)){
 
-            while(curr!=null){
+            while(curr!=null && curr.val!=-1){
                 s.add(curr);
                 curr = curr.left;
             }
