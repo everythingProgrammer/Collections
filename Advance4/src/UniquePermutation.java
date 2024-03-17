@@ -57,7 +57,7 @@ public class UniquePermutation {
         }
         ArrayList<ArrayList<Integer>> ans = new ArrayList<>();
         permutation(map,new ArrayList<>() , A, ans);
-
+        return ans;
     }
     public static void permutation(HashMap<Integer,Integer> map , ArrayList<Integer> list , ArrayList<Integer>A, ArrayList<ArrayList<Integer>>ans){
 
