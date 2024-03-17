@@ -4,7 +4,9 @@ import java.util.HashMap;
 public class NumberOfSquareFullArray {
     public static int solve(ArrayList<Integer> A) {
 
-
+        if(A.size()<2){
+            return 0;
+        }
         HashMap<Integer,Integer> map = new HashMap<>();
         for(int i = 0 ; i<A.size(); i++){
             if(map.containsKey(A.get(i))){
@@ -67,9 +69,18 @@ public class NumberOfSquareFullArray {
     }
     public static void main(String args[]){
         ArrayList<Integer> lst = new ArrayList<>();
-        lst.add(2);
-        lst.add(2);
-        lst.add(2);
+//        lst.add(41);
+        lst.add(783000521);
+        lst.add(766639918);
+        lst.add(195102639);
+        lst.add(230793946);
+        lst.add(757604720);
+        lst.add(77842679);
+        lst.add(674858911);
+        lst.add(496636809);
+        lst.add(855231289);
+//        lst.add(2);
+//        lst.add(2);
         solve(lst);
     }
 
