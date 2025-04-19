@@ -15,7 +15,8 @@ public class Constructors {
         Student s = new Student("Ankur", "A1");
         // This gives error because no-args constructor is no longer supplied by compiler
         // default no-args constuctor is only provided in scenario if no other constructor is defined.
-        Student s = new Student();
+
+        //Student s = new Student();
 
     }
 
