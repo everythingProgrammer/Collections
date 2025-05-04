@@ -43,9 +43,26 @@ class Student{
     }
 */
 
+    Student(){
+        name = null;
+        age = 0;
+        psp = 0;
+        batch = null;
+    }
+
     Student(String xname, String xbatch){
         name = xname;
         batch = xbatch;
+    }
+
+
+    // creating a copy constructor
+    // This will create shallow copy. because of String being a class ...
+    Student(Student old){
+        this.name = old.name;
+        this.age = old.age;
+        this.psp = old.psp;
+        this.batch = old.batch;
     }
 
 }
