@@ -10,6 +10,7 @@
       <module fileurl="file://$PROJECT_DIR$/LLD/LLD.iml" filepath="$PROJECT_DIR$/LLD/LLD.iml" />
       <module fileurl="file://$PROJECT_DIR$/LeetCode/LeetCode.iml" filepath="$PROJECT_DIR$/LeetCode/LeetCode.iml" />
       <module fileurl="file://$PROJECT_DIR$/Revise/Revise.iml" filepath="$PROJECT_DIR$/Revise/Revise.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SOLID/SOLID.iml" filepath="$PROJECT_DIR$/SOLID/SOLID.iml" />
       <module fileurl="file://$PROJECT_DIR$/Scaler.iml" filepath="$PROJECT_DIR$/Scaler.iml" />
       <module fileurl="file://$PROJECT_DIR$/gfg/gfg.iml" filepath="$PROJECT_DIR$/gfg/gfg.iml" />
     </modules>
