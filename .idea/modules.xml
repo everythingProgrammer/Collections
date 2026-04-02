@@ -13,6 +13,8 @@
       <module fileurl="file://$PROJECT_DIR$/SOLID/SOLID.iml" filepath="$PROJECT_DIR$/SOLID/SOLID.iml" />
       <module fileurl="file://$PROJECT_DIR$/Scaler.iml" filepath="$PROJECT_DIR$/Scaler.iml" />
       <module fileurl="file://$PROJECT_DIR$/gfg/gfg.iml" filepath="$PROJECT_DIR$/gfg/gfg.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SOLID/patternpractice/patternpractice.iml" filepath="$PROJECT_DIR$/SOLID/patternpractice/patternpractice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SOLID/patternpractice/spring/spring.iml" filepath="$PROJECT_DIR$/SOLID/patternpractice/spring/spring.iml" />
     </modules>
   </component>
 </project>
