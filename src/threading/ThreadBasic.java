@@ -4,7 +4,9 @@ public class ThreadBasic extends Thread{
 
     @Override
     public void run(){
-        System.out.println("Running Thread :" + Thread.currentThread().getName());
+        for(int i = 1; i<=5 ; i++){
+            System.out.println("Running Thread :" + Thread.currentThread().getName()+" Count "+i);
+        }
     }
 
     public static void main(String [] args){

@@ -3,7 +3,10 @@ package threading;
 public class ThreadBasicImplementRunnable implements Runnable{
 
     public void run(){
-        System.out.println("Task executed by "+Thread.currentThread().getName());
+        for(int i = 1; i<=5 ; i++){
+            System.out.println("Running Thread :" + Thread.currentThread().getName()+" Count "+i);
+        }
+
     }
 
 
@@ -11,6 +14,10 @@ public class ThreadBasicImplementRunnable implements Runnable{
     public static void main(String args[]){
         Thread t1 = new Thread( new ThreadBasicImplementRunnable());
         t1.start();
+        Thread t2 = new Thread( new ThreadBasicImplementRunnable());
+        t2.start();
+        Thread t3 = new Thread( new ThreadBasicImplementRunnable());
+        t3.start();
     }
 }
 
