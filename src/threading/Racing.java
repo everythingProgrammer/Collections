@@ -7,8 +7,9 @@ public class Racing {
         int counter[] = {0};
         Thread t1 = new Thread( ()->{
             for(int i = 0 ; i<10000; i++){
-                counter[0]++;
-                System.out.println("counter value "+counter[0]);
+                synchronized( lock) {
+                    counter[0]++;
+                }
             }
         });
 
@@ -16,7 +17,6 @@ public class Racing {
             for(int i = 0 ; i<10000 ; i++){
                 synchronized( lock) {
                     counter[0]++;
-                    System.out.println("counter value " + counter[0]);
                 }
             }
 

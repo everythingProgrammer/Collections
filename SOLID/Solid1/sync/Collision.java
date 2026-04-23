@@ -29,6 +29,7 @@ public class Collision {
     }
 
     private void incrementInstanceRequestCodeBlockLevel(){
+        Object obj = new Object();
         synchronized( Collision.class){
             instanceRequests+=1;
         }
