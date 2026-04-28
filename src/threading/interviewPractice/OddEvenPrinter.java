@@ -11,7 +11,7 @@ public class OddEvenPrinter {
         OddEvenPrinter lock = new OddEvenPrinter();
         Thread odd = new Thread(()->{
             try {
-                    synchronized (lock) {
+                synchronized (lock) {
                 while (lock.number <= 10  ) {
                         while (lock.number % 2 == 0) {
                             lock.wait();
