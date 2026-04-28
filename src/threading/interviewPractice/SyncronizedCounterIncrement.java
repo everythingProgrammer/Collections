@@ -13,7 +13,6 @@ public class SyncronizedCounterIncrement implements Runnable{
         for(int i  = 0; i<10000; i++) {
             synchronized (lock) {
                 counter++;
-//                notifyAll();
             }
         }
     }
