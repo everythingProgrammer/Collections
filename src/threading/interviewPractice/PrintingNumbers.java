@@ -34,12 +34,12 @@ public class PrintingNumbers {
     public static void main(String args[]) throws  InterruptedException{
         PrintingNumbers obj = new PrintingNumbers();
          Thread t1 = new Thread(  ()->{
+                while ( obj.num<10  ){
             synchronized(obj) {
-                while ( obj.flag   ){
                     try {
-                        if(obj.num > 10){
-                            break;
-                        }
+                        while(!obj.flag ){
+                              obj.wait();
+                         }
                         System.out.println("T1 "+obj.num);
                         obj.num++;
                         obj.flag = false;
@@ -55,11 +55,12 @@ public class PrintingNumbers {
         });
 
         Thread t2 = new Thread(  ()->{
+                // generally termination condition is kept in while and turn condition in if block
+                while(obj.num<10) {
             synchronized(obj){
-                while(!obj.flag ) {
                     try {
-                        if(obj.num > 10){
-                            break;
+                        while( obj.flag){
+                             obj.wait();
                         }
                         System.out.println("T2 "+obj.num);
                         obj.num++;
