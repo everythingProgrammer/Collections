@@ -1,6 +1,10 @@
 package threading.interviewPractice;
 
 
+/*
+        This was Question 4
+ */
+
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.concurrent.locks.Lock;
@@ -35,30 +39,35 @@ public class BoundedProducerConsumer {
     }
 
 
-    public static void main(String args[]) throws InterruptedException {
-
-        BoundedProducerConsumer sharedBuffer = new BoundedProducerConsumer();
-
-        Thread [] producers = new Thread[3] ;
-        Thread [] consumers = new Thread[3];
-        for(int i = 0 ; i<3; i++){
-            producers[i] = new Thread(new Producer(sharedBuffer),"Producer"+i);
-            consumers[i] = new Thread(new Consumer(sharedBuffer),"Consumer"+i);
-        }
-        for(int i = 0 ; i<3;i++){
-            producers[i].start();
-            consumers[i].start();
-        }
-
-        for(int i = 0 ; i<3; i++){
-            producers[i].join();
-            consumers[i].join();
-        }
-
-    }
+//    public static void main(String args[]) throws InterruptedException {
+//
+//        BoundedProducerConsumer sharedBuffer = new BoundedProducerConsumer();
+//
+//        Thread [] producers = new Thread[3] ;
+//        Thread [] consumers = new Thread[3];
+//        for(int i = 0 ; i<3; i++){
+//            producers[i] = new Thread(new Producer(sharedBuffer),"Producer"+i);
+//            consumers[i] = new Thread(new Consumer(sharedBuffer),"Consumer"+i);
+//        }
+//        for(int i = 0 ; i<3;i++){
+//            producers[i].start();
+//            consumers[i].start();
+//        }
+//
+//        for(int i = 0 ; i<3; i++){
+//            producers[i].join();
+//            consumers[i].join();
+//        }
+//
+//    }
 
 }
-class Producer implements Runnable{
+/*
+    # Uncomment Before Running
+
+
+
+private class Producer implements Runnable{
     BoundedProducerConsumer boundedBuffer;
     Producer(BoundedProducerConsumer sharedBuffer){
         boundedBuffer= sharedBuffer;
@@ -88,3 +97,4 @@ class Consumer implements Runnable{
         }
     }
 }
+*/
