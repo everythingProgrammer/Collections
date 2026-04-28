@@ -159,3 +159,123 @@ class Consumer implements Runnable {
         }
     }
 }
+
+/*
+4th improvement — final fields
+
+Your current:
+
+private ReentrantLockedProducerConsumer sharedBuffer;
+
+Works.
+
+But:
+
+sharedBuffer
+
+is mutable.
+
+Meaning:
+
+this is allowed:
+
+sharedBuffer = anotherBuffer;
+
+later.
+
+That’s dangerous.
+
+With:
+
+private final ReentrantLockedProducerConsumer sharedBuffer;
+
+Java guarantees:
+
+assigned once
+never reassigned
+
+Immutable reference.
+
+Important distinction:
+
+final reference ≠ immutable object
+
+This:
+
+final Queue<Integer> queue
+
+means:
+
+queue reference fixed.
+
+But contents can change:
+
+queue.add(...)
+queue.poll(...)
+
+Still allowed.
+
+Only reassignment forbidden:
+
+queue = new LinkedList<>();
+
+forbidden.
+
+Why does this matter in concurrency?
+
+Because mutable references create visibility and consistency risks.
+
+Imagine:
+
+Producer:
+
+sharedBuffer.produce()
+
+Consumer:
+
+sharedBuffer.consume()
+
+If someone reassigns:
+
+sharedBuffer = newBuffer;
+
+Now producer and consumer may operate on different buffers.
+
+That breaks synchronization model.
+
+Catastrophic.
+
+final protects object graph stability.
+
+Especially important for shared resources.
+
+Extra JVM benefit:
+
+Final fields have stronger initialization guarantees under Java Memory Model.
+
+Once constructor finishes:
+
+other threads safely see initialized final fields
+
+This is one reason immutable objects are naturally thread-safe.
+
+Relevant in advanced interviews.
+
+Summary:
+
+Interrupt improvement:
+
+preserves cancellation intent
+
+Final field improvement:
+
+preserves reference stability
+
+Neither changes “correctness” of your toy program.
+
+Both improve production safety.
+
+That distinction matters in interviews:
+
+working code vs production-grade code.
+ */
