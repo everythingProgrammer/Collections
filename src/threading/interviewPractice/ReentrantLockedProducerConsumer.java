@@ -86,7 +86,7 @@ public class ReentrantLockedProducerConsumer {
             queue.add(x);
             consumerQueue.signalAll();
         } catch (InterruptedException e) {
-            e.printStackTrace();
+            Thread.currentThread().interrupt();
         } finally {
             lock.unlock();
         }
@@ -99,7 +99,7 @@ public class ReentrantLockedProducerConsumer {
             System.out.println("Consumer " + Thread.currentThread().getName() + " polled " + queue.poll());
             producerQueue.signalAll();
         } catch (InterruptedException e) {
-            e.printStackTrace();
+            Thread.currentThread().interrupt();
         } finally {
             lock.unlock();
         }
