@@ -1,6 +1,6 @@
 package adapter;
 
-public class NotificationSender {
+public class NotificationSender implements Notification {
 
 
         public void send(String message){

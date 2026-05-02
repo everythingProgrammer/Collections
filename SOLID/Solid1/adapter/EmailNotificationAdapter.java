@@ -1,6 +1,6 @@
 package adapter;
 
-public class EmailNotificationAdapter {
+public class EmailNotificationAdapter implements Notification{
 
 
     private final LegacyEmail legacyEmailService ;
