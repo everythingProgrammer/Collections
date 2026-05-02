@@ -25,7 +25,7 @@ public class DocumentServiceProxy implements DocumentService {
             Explicit Allow List >>> Deny List ,
             for example here if user Role comes CEO then it will allow , but that's not mentioned in original requirement.
             Also throw exception when you want to show denied behaviour .
-            Also Null safety needs to checked here what if userRole comes null ... 
+            Also Null safety needs to checked here what if userRole comes null ...
          */
         if(this.userRole.equalsIgnoreCase("EMPLOYEE") ){
             System.out.println(" Denied");
