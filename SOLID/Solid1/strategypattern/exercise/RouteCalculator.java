@@ -1,6 +1,6 @@
 package strategypattern.exercise;
 
-public class RouteCalculator {
+public class  RouteCalculator {
 
     private  RouteStrategy strategy;
 
