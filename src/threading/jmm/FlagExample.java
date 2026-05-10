@@ -3,7 +3,7 @@ package threading.jmm;
 public class FlagExample {
 
 
-
+   
     boolean flag = false;
     int value = 0;
     synchronized void   writer(){
