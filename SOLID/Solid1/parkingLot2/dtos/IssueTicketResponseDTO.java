@@ -3,6 +3,15 @@ package parkingLot2.dtos;
 import parkingLot2.models.Ticket;
 
 public class IssueTicketResponseDTO {
+    private String failureMessage;
+
+    public String getFailureMessage() {
+        return failureMessage;
+    }
+
+    public void setFailureMessage(String failureMessage) {
+        this.failureMessage = failureMessage;
+    }
 
     private Ticket ticket;
 

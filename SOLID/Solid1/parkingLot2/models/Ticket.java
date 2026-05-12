@@ -12,6 +12,18 @@ public class Ticket extends BaseModel{
     private Vehicle vehicle;
     private String ownerName;
 
+    public Ticket(int id, Date createdAt, Date updatedAt, Date entryTime, Gate gate, Operator operator, ParkingSlot parkingSlot, Vehicle vehicle, String ownerName) {
+        super(id, createdAt, updatedAt);
+        this.entryTime = entryTime;
+        this.gate = gate;
+        this.operator = operator;
+        this.parkingSlot = parkingSlot;
+        this.vehicle = vehicle;
+        this.ownerName = ownerName;
+    }
+    public Ticket() {
+        super(0, new Date(), new Date()); // or handle BaseModel fields appropriately
+    }
     public String getOwnerName() {
         return ownerName;
     }

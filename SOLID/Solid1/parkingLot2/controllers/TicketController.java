@@ -16,14 +16,19 @@ public class TicketController {
 
     IssueTicketResponseDTO issueTicket(IssueTicketRequestDTO request){
         IssueTicketResponseDTO response = new IssueTicketResponseDTO();
+        try {
+            Ticket ticket = ticketService.issueTicket(request.getGateId(),
+                    request.getVehicleNumber(),
+                    request.getOwnerName(),
+                    request.getVehicleType());
 
-        Ticket ticket = ticketService.issueTicket(request.getGateId(),
-                request.getVehicleNumber(),
-                request.getOwnerName(),
-                request.getVehicleType());
+            response.setResponseStatus(ResponseStatus.SUCCESS);
+            response.setTicketId(ticket.getId());
+        }catch(Exception e){
+            response.setResponseStatus(ResponseStatus.FAILURE);
+            response.setFailureMessage(e.getMessage());
+        }
 
-        response.setResponseStatus(ResponseStatus.SUCCESS);
-        response.setTicketId(ticket.getId());
         return response;
     }
 }
