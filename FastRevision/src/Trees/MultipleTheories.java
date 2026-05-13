@@ -112,17 +112,17 @@ public class MultipleTheories {
 
     int longestPath = 0;
     public int diameterOfBinaryTree(TreeNode root) {
-        recusriveCalculate(root);
+        recursiveCalculate(root);
         return longestPath;
     }
 
-    public int recusriveCalculate(TreeNode root){
+    public int recursiveCalculate(TreeNode root){
         if(root==null){
             return 0;
         }
 
-        int leftTree = recusriveCalculate(root.left);
-        int rightTree = recusriveCalculate(root.right);
+        int leftTree = recursiveCalculate(root.left);
+        int rightTree = recursiveCalculate(root.right);
 
         longestPath = Math.max(leftTree+rightTree, longestPath);
 
