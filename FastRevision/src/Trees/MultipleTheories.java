@@ -132,7 +132,75 @@ public class MultipleTheories {
     }
 
 
+
+    /* this was my try */
     public int maxPathSum(TreeNode root) {
+        return 0 ;
+    }
+
+    // if there is no value at kth position then returns -1
+    public int kthSmallest(TreeNode root, int k) {
+        findKthSmallest(root,k,0);
+        return valueAtPosition==-99?-1:valueAtPosition;
+    }
+
+    int valueAtPosition = -99;
+    public int findKthSmallest(TreeNode root, int k ,int parentHeight){
+        if(root == null){
+            return 0 ;
+        }
+        int leftElements = findKthSmallest(root.left,k,0);
+
+        int currentElementPos = leftElements+1+parentHeight;
+        if(currentElementPos == k){
+            valueAtPosition = root.val;
+        }
+        int rightElements = findKthSmallest(root.right,k,currentElementPos);
+        return rightElements+currentElementPos;
 
     }
+
+    /*
+    This is GPT SOLUTION for the same above problem
+     */
+
+    int count = 0;
+    int answer = -1;
+
+    public int kthSmallestByGPT(TreeNode root, int k) {
+
+        inorderByGPT(root, k);
+
+        return answer;
+    }
+
+    public void inorderByGPT(TreeNode root, int k){
+
+        if(root == null){
+            return;
+        }
+
+        // left
+        inorderByGPT(root.left, k);
+
+        // current node visited
+        count++;
+
+        if(count == k){
+            answer = root.val;
+            return;
+        }
+
+        // right
+        inorderByGPT(root.right, k);
+    }
+
+
+/* TILL HERE */
+
+
 }
+
+
+
+
