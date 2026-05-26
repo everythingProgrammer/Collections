@@ -19,6 +19,22 @@ public class Controller {
         tasks.add(()->{Thread.sleep(1299); return "response from server 3 ";});
 
 
+        /*
+           To see tasks getting interrupted
+         */
+        tasks.add(() -> {
+            try {
+                Thread.sleep(3000);
+                return "server4";
+            }
+            catch (InterruptedException e){
+                System.out.println(
+                        "server4 cancelled"
+                );
+                throw e;
+            }
+        });
+
         ExecutorService es = Executors.newFixedThreadPool(3);
         String result = es.invokeAny(tasks);
 
