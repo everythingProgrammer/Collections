@@ -74,6 +74,7 @@ public class Dijkastra {
     public static int dijkastra2(List<List<int[]>> graph, int source , int n){
         int distance[] = new int[n+1];
 
+
         Arrays.fill(distance, Integer.MAX_VALUE);
         distance[0]  = -1;
         PriorityQueue<int[]> pq = new PriorityQueue<>((a,b)-> Integer.compare(a[1],b[1]));
