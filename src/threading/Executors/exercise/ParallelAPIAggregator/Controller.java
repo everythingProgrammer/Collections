@@ -36,7 +36,7 @@ public class Controller {
 
 
         // now collect
-        for(int i=0;i<24;i++){
+        for(int i=0;i<3;i++){
 
             Future<String> completed =
                     cs.take();
