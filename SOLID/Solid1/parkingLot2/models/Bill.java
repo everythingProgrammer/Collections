@@ -14,6 +14,10 @@ public class Bill extends BaseModel{
     // to support partial payments
     private List<Payment> payment;
 
+    public Bill(int id, Date createdAt, Date updatedAt) {
+        super(id, createdAt, updatedAt);
+    }
+
     public Date getExitDate() {
         return exitDate;
     }

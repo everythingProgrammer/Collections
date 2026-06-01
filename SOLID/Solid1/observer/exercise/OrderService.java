@@ -24,8 +24,6 @@ public class OrderService {
         orderService.addObserver(new InventoryService());
         orderService.addObserver(new EmailService());
         orderService.addObserver(new InvoiceService());
-
-
         orderService.orderPlace();
         orderService.notifyObservers("order");
 
