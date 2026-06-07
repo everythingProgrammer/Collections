@@ -7,7 +7,7 @@ public class Client {
 
 
         String request  = "token_user_request";
-
+        String request2  = "spam_admin_request";
 
         AuthenticationMiddleware auth = new AuthenticationMiddleware();
         AuthorizationMiddleware auth2 = new AuthorizationMiddleware();
@@ -18,7 +18,7 @@ public class Client {
 
         rml.setNext(auth).setNext(auth2);
 
-        System.out.println(rml.checkRequest(request));
+        System.out.println(rml.checkRequest(request2));
 
     }
 }
