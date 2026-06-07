@@ -14,7 +14,7 @@ public class Controller {
 
         List<Callable<String>> tasks = new ArrayList<>();
 
-        tasks.add(()->{ Thread.sleep(1000); return "response from server1"; });
+        tasks.add(()->{ Thread.sleep( 1000); return "response from server1"; });
         tasks.add(()->{ Thread.sleep(1003); return "response from server 2";});
         tasks.add(()->{Thread.sleep(1299); return "response from server 3 ";});
 
